@@ -1,0 +1,14 @@
+mysql_01:
+    image: mariadb:10.1.38
+    environment:
+     - MYSQL_ROOT_PASSWORD=123456
+    ports:
+     - "3306:3306"
+    container_name: mysql_master
+mysql_02:
+    image: mariadb:10.1.38
+    environment:
+     - MYSQL_ROOT_PASSWORD=123456
+    ports:
+     - "3308:3306"
+    container_name: mysql_slave
